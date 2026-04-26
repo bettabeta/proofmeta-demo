@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0b0b;
+  --surface: #151412;
+  --ink: #e8e3d5;
+  --muted: #8a8678;
+  --amber: #d4873c;
+  --green: #7ba05b;
+  --red: #c65b4e;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--bg);
+}
