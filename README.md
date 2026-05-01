@@ -14,6 +14,12 @@ This execution repo is intentionally downstream of:
 - License templates and chain-agnostic license schema:
   - https://github.com/bettabeta/proofmeta-license-contracts
 
+### Contracts used in demo flows
+
+- `schemas/license-type.schema.json`
+- `schemas/run-receipt.schema.json`
+- `schemas/rating.schema.json`
+
 ## Scope of this repo
 
 - Demo UI for ProofMeta licensing flow
