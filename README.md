@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ProofMeta Demo
 
-## Getting Started
+> Layer: Execution
+> Depends on: [proofmeta-primitive-core](https://github.com/bettabeta/proofmeta-primitive-core) + [proofmeta-license-contracts](https://github.com/bettabeta/proofmeta-license-contracts)
+> Guarantees: Interactive end-to-end protocol demo showing discovery, request, status lifecycle, and envelope verification UX.
 
-First, run the development server:
+This repo is the execution/demo layer for ProofMeta. It demonstrates how an agent-facing product can consume protocol primitives and license semantics in a practical user flow.
+
+## Protocol inputs
+
+This execution repo is intentionally downstream of:
+- Primitive protocol rules and envelope semantics:
+  - https://github.com/bettabeta/proofmeta-primitive-core
+- License templates and chain-agnostic license schema:
+  - https://github.com/bettabeta/proofmeta-license-contracts
+
+## Scope of this repo
+
+- Demo UI for ProofMeta licensing flow
+- Simulated provider/consumer interactions
+- Envelope generation/inspection in a product-like experience
+
+Not in scope here:
+- Defining new core protocol primitives (belongs in primitive-core)
+- Defining canonical license semantics/templates (belongs in license-contracts)
+
+## Getting started
+
+Requirements:
+- Node.js 20+
+- npm
+
+Run:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Architecture rule
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Dependency direction must stay one-way:
 
-## Learn More
+execution -> primitive-core + license-contracts
 
-To learn more about Next.js, take a look at the following resources:
+Never the reverse.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
